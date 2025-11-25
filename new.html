@@ -1,0 +1,224 @@
+<body>
+    <div class="heading">
+        <h1 id="animated-heading">HAPPY CLIENTS</h1>
+    </div>
+
+    <div class="testimonial-container">
+        <div class="testimonial-section">
+            <div class="slider-track">
+                <!-- First row images - Slider from left to right -->
+                <div class="slide">
+                    <div class="testimonial-card">
+                        <img src="zB72j1czHz4jo67Rsi92uhRBlhM.png" alt="Client Image 1">
+                        <div class="name">Clara M.</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="testimonial-card">
+                        <img src="rLv9tOt84JHoBK14Dtnm0JXt5I.avif" alt="Client Image 2">
+                        <div class="name">Clara M.</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="testimonial-card">
+                        <img src="vShX01imeGQIdjIbHP1Mg6NM.png" alt="Client Image 3">
+                        <div class="name">Clara M.</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="testimonial-card">
+                        <img src="WyXj20q2jERObBQoA9auuTbPp8.png" alt="Client Image 4">
+                        <div class="name">Clara M.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="testimonial-section">
+            <div class="slider-track-reverse">
+                <!-- Second row images - Slider from right to left -->
+                <div class="slide">
+                    <div class="testimonial-card">
+                        <img src="AzCpaNTqiP3qlST89Jg7QLCZIeM.avif" alt="Client Image 5">
+                        <div class="name">John D.</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="testimonial-card">
+                        <img src="hBJ8woraqbsRZ9TkoEB66WGcko.avif" alt="Client Image 6">
+                        <div class="name">John D.</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="testimonial-card">
+                        <img src="msGcXYHfpLswYA98goeQK0BN0zk.png" alt="Client Image 7">
+                        <div class="name">John D.</div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <div class="testimonial-card">
+                        <img src="QN4NNBo7AZKVdnCG5keACS72DA.avif" alt="Client Image 8">
+                        <div class="name">John D.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Centered content overlay -->
+        <div class="content-overlay">
+            <div class="dot"></div>
+            <p>"Charmant's delicate designs perfectly match my minimalist style. The Linear Drop
+                Earrings are my absolute favorite—I get compliments every time I wear them. Stunning
+                craftsmanship!"
+            </p>
+            <div style="margin: 1rem 0;">
+                <span
+                    style="display: inline-block; width: 30px; height: 1px; background: #666; vertical-align: middle;"></span>
+                <span
+                    style="display: inline-block; width: 4px; height: 4px; background: #666; border-radius: 50%; margin: 0 4px;"></span>
+                <span
+                    style="display: inline-block; width: 4px; height: 4px; background: #666; border-radius: 50%; margin: 0 4px;"></span>
+                <span
+                    style="display: inline-block; width: 4px; height: 4px; background: #666; border-radius: 50%; margin: 0 4px;"></span>
+            </div>
+            <div style="font-weight: 500;">Clara</div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Animated text reveal for heading
+            const heading = document.querySelector('.heading h1');
+            const text = heading.textContent;
+            heading.textContent = '';
+
+            let index = 0;
+            function revealText() {
+                if (index < text.length) {
+                    heading.textContent += text[index];
+                    heading.style.opacity = 1;
+                    heading.style.transform = 'translateY(0)';
+                    index++;
+                    setTimeout(revealText, 100);
+                }
+            }
+
+            setTimeout(revealText, 500);
+
+            // Clone slides for infinite scroll and update slider spacing
+            function setupSliders() {
+                const tracks = document.querySelectorAll('.slider-track, .slider-track-reverse');
+
+                tracks.forEach(track => {
+                    const slides = track.querySelectorAll('.slide');
+                    slides.forEach(slide => {
+                        const clone = slide.cloneNode(true);
+                        track.appendChild(clone);
+                    });
+                });
+            }
+            setupSliders();
+        });
+    </script>
+
+    <style>
+        /* Center content overlay statically on the slider */
+        .content-overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            width: 60%;
+            max-width: 500px;
+            z-index: 10;
+        }
+
+        /* Slider Styles */
+        .testimonial-container {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .testimonial-section {
+            position: relative;
+            display: flex;
+            overflow: hidden;
+        }
+
+        .slider-track,
+        .slider-track-reverse {
+            display: flex;
+            width: max-content;
+            animation: moveLeftToRight 20s linear infinite;
+        }
+
+        .slider-track-reverse {
+            animation: moveRightToLeft 20s linear infinite;
+        }
+
+        .slide {
+            margin: 0;
+            /* Removed the margin to reduce spacing */
+        }
+
+        .testimonial-card {
+            width: 300px;
+            /* Reduced width to minimize space between images */
+            height: 300px;
+            /* Adjusted height */
+            background-color: #f8f8f8;
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .testimonial-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .testimonial-card .name {
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        /* Centered Heading */
+        .heading {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-top: 20px;
+            color: #333;
+        }
+
+        /* Animation for sliders */
+        @keyframes moveLeftToRight {
+            0% {
+                transform: translateX(-100%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes moveRightToLeft {
+            0% {
+                transform: translateX(100%);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</body>
