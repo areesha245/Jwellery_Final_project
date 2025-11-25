@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Charmant Jewelry Shop</title>
+    <link rel="stylesheet" href="shop.css"> <!-- Link to the CSS file -->
+</head>
+
+<body>
+    <div class="newest-items">
+        <h1 class="heading">SHOP ALL ITEMS</h1>
+        <div class="items-container">
+            <!-- First Row -->
+            <div class="row">
+                <a href="addtocart.html" class="item-link">
+                    <div class="item">
+                        <img src="V17XXaUqYp58Mw2vxBOHMSDsC8U.avif" alt="Delicate Knot Bracelet">
+                        <p class="price">$500</p>
+                        <p class="title">Delicate Knot Bracelet</p>
+                    </div>
+                </a>
+                <a href="addtocart.html" class="item-link">
+                    <div class="item">
+                        <img src="1APxLSz9uhB91ocicXkKSA1tXw.avif" alt="Vintage Locket Necklace">
+                        <p class="price">$1.3K</p>
+                        <p class="title">Vintage Locket Necklace</p>
+                    </div>
+                </a>
+                <a href="addtocart.html" class="item-link">
+                    <div class="item">
+                        <img src="47Hv87Jvbbi9gMDa7hfOeThUeK4.avif" alt="Double Pendant Necklace">
+                        <p class="price">$1.1K</p>
+                        <p class="title">Double Pendant Necklace</p>
+                    </div>
+                </a>
+                <a href="addtocart.html" class="item-link">
+                    <div class="item">
+                        <img src="KjAdHtrFfV8Yo5A1Sq4J1ZBrc0.avif" alt="Charm Link Bracelet">
+                        <p class="price">$1.1K</p>
+                        <p class="title">Charm Link Bracelet</p>
+                    </div>
+                </a>
+            </div>
+            <!-- Second Row -->
+            <div class="row">
+                <a href="addtocart.html" class="item-link">
+                    <div class="item">
+                        <img src="1mLdqjRJLbVthTTpW022MvJxFI.avif" alt="Silver Chain Necklace">
+                        <p class="price">$900</p>
+                        <p class="title">Silver Chain Necklace</p>
+                    </div>
+                </a>
+                <a href="addtocart.html" class="item-link">
+                    <div class="item">
+                        <img src="3NSbBNJLeB3DQx0rOmddiXJwU.avif" alt="Rose Gold Ring">
+                        <p class="price">$750</p>
+                        <p class="title">Rose Gold Ring</p>
+                    </div>
+                </a>
+                <a href="addtocart.html" class="item-link">
+                    <div class="item">
+                        <img src="1mLdqjRJLbVthTTpW022MvJxFI.avif" alt="Elegant Stud Earrings">
+                        <p class="price">$1.2K</p>
+                        <p class="title">Elegant Stud Earrings</p>
+                    </div>
+                </a>
+                <a href="addtocart.html" class="item-link">
+                    <div class="item">
+                        <img src="RDVoBPvLRxLA5jWdCEAY7hTmrIU.avif" alt="Classic Pearl Necklace">
+                        <p class="price">$1.5K</p>
+                        <p class="title">Classic Pearl Necklace</p>
+                    </div>
+                </a>
+            </div>
+
+            <!-- Third Row -->
+            <div class="row">
+                <a href="addtocart.html" class="item-link">
+                    <div class="item">
+                        <img src="yfhtJQu7UCekCh4Ed337tPD90E.avif" alt="Sapphire Gem Bracelet">
+                        <p class="price">$2K</p>
+                        <p class="title">Sapphire Gem Bracelet</p>
+                    </div>
+                </a>
+                <a href="addtocart.html" class="item-link">
+                    <div class="item">
+                        <img src="vSLqpzRSFX5wUT1jjnTDj2SZyI.avif" alt="Gold Hoop Earrings">
+                        <p class="price">$800</p>
+                        <p class="title">Gold Hoop Earrings</p>
+                    </div>
+                </a>
+                <a href="addtocart.html" class="item-link">
+                    <div class="item">
+                        <img src="KjAdHtrFfV8Yo5A1Sq4J1ZBrc0.avif" alt="Designer Diamond Ring">
+                        <p class="price">$2.5K</p>
+                        <p class="title">Designer Diamond Ring</p>
+                    </div>
+                </a>
+                <a href="addtocart.html" class="item-link">
+                    <div class="item">
+                        <img src="47Hv87Jvbbi9gMDa7hfOeThUeK4.avif" alt="Minimalist Chain Bracelet">
+                        <p class="price">$600</p>
+                        <p class="title">Minimalist Chain Bracelet</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const heading = document.querySelector('.heading');
+            const text = heading.textContent; // Get the text content
+            heading.textContent = ''; // Clear the text from the heading
+
+            // Loop through each character of the text and wrap them in a span
+            text.split('').forEach((char, index) => {
+                const span = document.createElement('span');
+                span.textContent = char;
+                span.classList.add('letter');
+                heading.appendChild(span);
+
+                // Add delay for each letter
+                span.style.transitionDelay = `${index * 0.1}s`;
+            });
+
+            // Fade in the heading after the letters are added
+            setTimeout(() => {
+                heading.style.opacity = '1';
+                const letters = document.querySelectorAll('.letter');
+                letters.forEach((letter, index) => {
+                    setTimeout(() => {
+                        letter.style.opacity = '1';
+                        letter.style.transform = 'scale(1)';
+                    }, index * 100);
+                });
+            }, 500);
+        });
+    </script>
+</body>
+
+</html>
