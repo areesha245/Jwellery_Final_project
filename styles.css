@@ -1,0 +1,459 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+header {
+  position: relative;
+  background: none;
+  color: white;
+  padding: 0;
+  text-align: left;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+/* Removed the background overlay */
+.background-overlay {
+  display: none;
+}
+
+/* Hero section with minimal spacing */
+.hero {
+  padding: 20px 70px; /* Reduced padding to bring content closer to the navbar */
+  position: relative;
+  z-index: 1;
+  max-width: 650px;
+  margin-top: 20px; /* Added margin to ensure spacing after navbar */
+}
+
+/* Hero title style */
+.hero-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 68px;
+  margin-bottom: 20px; /* Reduced margin to bring subtitle closer */
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: 0.5px;
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Hero subtitle style */
+.hero-subtitle {
+  font-size: 20px;
+  margin-bottom: 20px; /* Reduced margin to bring button closer */
+  opacity: 0;
+  transform: translateY(30px);
+  font-weight: 300;
+  line-height: 1.8;
+  letter-spacing: 0.3px;
+}
+
+/* Button style for 'Shop Now' */
+.btn-shop {
+  padding: 16px 45px;
+  font-size: 15px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 0;
+  background: transparent;
+  color: rgb(254, 254, 254);
+  border: 2px solid white;
+  font-weight: 500;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: all 0.4s ease;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+.btn-shop::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: rgb(255, 254, 254);
+  transition: all 0.4s ease;
+  z-index: -1;
+}
+
+.btn-shop:hover {
+  color: black;
+}
+
+.btn-shop:hover::before {
+  width: 100%;
+}
+
+/* Navbar styles */
+.navbar {
+  background: transparent;
+  padding: 25px 70px; /* Added padding to align with hero content */
+  transition: all 0.3s ease;
+}
+
+.navbar-brand {
+  color: white;
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.nav-link {
+  color: white;
+  font-family: 'Montserrat', sans-serif;
+  position: relative;
+  padding: 8px 20px;
+  margin: 0 5px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+/* Gold underline on hover for navigation links */
+.nav-link::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #FFD700; /* Hex color for gold */
+  transform: translateX(-50%);
+  transition: width 0.3s ease;
+}
+
+.nav-link:hover::before {
+  width: 70%;
+}
+
+/* Shopping cart icon and cart count */
+.shopping-cart {
+  position: relative;
+}
+
+.cart-count {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: white;
+  color: black;
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+/* Hero background image styles */
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://framerusercontent.com/images/g5RgJxVlVnNGGG8WU9pq5vBN7B0.png?scale-down-to=2048');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: -2;
+}
+/* Features Section */
+.features {
+  background-color: #ffffff; /* White background */
+  padding: 60px 0;
+  text-align: center;
+}
+
+.features .container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 30px;
+}
+
+.feature {
+  flex: 1 1 250px;
+  max-width: 300px;
+  padding: 25px;
+  background-color: #d4d0d0; /* Dark background */
+  border: 1px solid #ffffff; /* White border */
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(1, 1, 1, 0.2);
+}
+
+.feature h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  color: #121111; /* White text */
+  margin-bottom: 12px;
+}
+.feature p {
+  font-size: 16px;
+  color: #141212; /* Light gray text */
+}
+/* Collections Section */
+.collections {
+  padding: 100px 0;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Centering text container */
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 40px;
+}
+.collections h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 42px;
+  font-weight: 700;
+  color: #101010;
+  text-transform: uppercase;
+  margin: 0;
+  opacity: 0;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.collections h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
+  height: 3px;
+  background-color: #101010;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.6s ease-out;
+}
+
+.collections h2.visible::after {
+  transform: scaleX(1);
+}
+
+.collections p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 18px;
+  color: #454545;
+  line-height: 1.8;
+  max-width: 600px;
+  opacity: 0;
+  transform: translateY(30px);
+  margin: 0;
+}
+
+/* Cursor effect for typing animation */
+.typing-cursor {
+  display: inline-block;
+  width: 2px;
+  height: 42px;
+  background-color: #101010;
+  margin-left: 5px;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+/* Updated: Flexbox to align collection items horizontally in one line */
+.container {
+  display: flex;
+  justify-content: flex-start; /* Align items to the left */
+  gap: 10px; /* Minimal gap between items */
+  flex-wrap: nowrap; /* Prevent wrapping */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Collection Item Styles */
+.collection-item {
+  position: relative;
+  overflow: hidden;
+  width: 33.33%; /* Ensure 3 items per row */
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+}
+
+/* Image Styles */
+.collection-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.collection-item:hover img {
+  transform: scale(1.1); /* Zoom in effect */
+}
+
+/* Overlay Styles */
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.collection-item:hover .overlay {
+  opacity: 1; /* Show overlay on hover */
+}
+
+/* Overlay text */
+.overlay h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px;
+  color: #FFD700; /* Gold text */
+  text-align: center;
+  margin: 0;
+}
+
+/* Responsive styles to stack collection items on smaller screens */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: center; /* Center items on small screens */
+  }
+
+  /* Ensure each item takes full width on small screens */
+  .collection-item {
+    max-width: 100%; /* Make items take up the full width */
+  }
+  .jewelry-showcase {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+}
+/* Centered Heading */
+.centered-heading {
+  text-align: center;
+  font-size: 3rem;
+  margin-top: 20px;
+  color: #333;
+}
+
+/* Section Styles */
+.section {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  margin: 20px 0;
+}
+
+.content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: moveLeftToRight 20s linear infinite;
+}
+
+.moving-right-to-left .content {
+  animation: moveRightToLeft 20s linear infinite;
+}
+
+.box {
+  display: inline-block;
+  width: 300px;
+  height: 150px;
+  background-color: #ddd;
+  margin: 0 10px;
+  text-align: center;
+  line-height: 150px;
+  font-size: 1.5rem;
+  color: #333;
+  border-radius: 10px;
+}
+
+/* Image Section */
+.image-section {
+  position: relative;
+  width: 100%;
+  height: 300px;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.image-section img {
+  max-width: 100%;
+  max-height: 100%;
+  border-radius: 10px;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: -100%;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  text-align: center;
+  transition: bottom 0.5s ease-in-out;
+}
+
+.image-section:hover .text-overlay {
+  bottom: 0;
+}
+
+.text-overlay p {
+  font-size: 1.2rem;
+  color: #333;
+  margin: 0;
+}
+
+.text-overlay .author {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* Animations */
+@keyframes moveLeftToRight {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+@keyframes moveRightToLeft {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+}
+
+
+
