@@ -1,0 +1,122 @@
+/* CHARMANT Section */
+.charmant-section {
+    position: relative;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #dfd9d9;
+    margin: 0 auto;
+}
+
+/* CHARMANT Text */
+.charmant-text {
+    position: relative;
+    font-size: 10rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    display: flex;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+/* Animation for each letter */
+.char {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Footer Styles */
+.footer {
+    background: #ffffff; /* White background */
+    color: #000000; /* Black text color */
+    padding: 40px 20px;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+    border-top: none; /* Remove border top */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    margin: 20px;
+    flex: 1 1 200px;
+}
+
+.footer-section h3 {
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+    color: #000000; /* Black heading color */
+    text-transform: uppercase;
+    font-weight: bold; /* Bold heading */
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.footer-section ul li a {
+    color: #000000; /* Black text color for links */
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #e67e22; /* Orange hover color for links */
+    transform: translateX(5px);
+}
+
+.footer-section p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+    color: #000000; /* Black text color */
+}
+
+/* Social Media Icons */
+.footer-section.social ul {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.footer-section.social ul li a {
+    display: inline-block;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    background-color: #e67e22; /* Orange background for icons */
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+.footer-section.social ul li a:hover {
+    background-color: #d35400; /* Darker orange on hover */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0; /* Light gray border for separation */
+    font-size: 0.9rem;
+    color: #000000; /* Black text color */
+}
+
+.footer-bottom p {
+    margin: 0;
+}
