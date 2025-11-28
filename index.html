@@ -7,244 +7,22 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Montserrat:wght@300;400;500&display=swap"
         rel="stylesheet">
-<<<<<<< Updated upstream
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
- 
-=======
-    
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
-   
->>>>>>> Stashed changes
     <link rel="stylesheet" href="styles.css">
-    <style>
-        /* Navbar Styles */
-        .navbar {
-            background-color: #101010 !important;
-            padding: 1rem 2rem;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: none;
-        }
-
-        .navbar-brand {
-            font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #ffffff !important;
-            letter-spacing: 1px;
-            text-decoration: none;
-        }
-
-        .navbar-nav {
-            display: flex;
-            list-style: none;
-            margin: 0;
-            padding: 0;
-            gap: 2rem;
-        }
-
-        .nav-item {
-            margin: 0;
-        }
-
-        .nav-link {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 1rem;
-            font-weight: 500;
-            color: #ffffff !important;
-            transition: color 0.3s ease;
-            position: relative;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .nav-link:hover {
-            color: #d4af37 !important;
-        }
-
-        .nav-link::after {
-            content: '';
-            position: absolute;
-            bottom: -5px;
-            left: 0;
-            width: 0;
-            height: 2px;
-            background-color: #d4af37;
-            transition: width 0.3s ease;
-        }
-
-        .nav-link:hover::after {
-            width: 100%;
-        }
-
-        .shopping-cart {
-            position: relative;
-        }
-
-        .cart-count {
-            position: absolute;
-            top: -8px;
-            right: -8px;
-            background-color: #d4af37;
-            color: #101010;
-            border-radius: 50%;
-            width: 20px;
-            height: 20px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 0.75rem;
-            font-weight: bold;
-        }
-
-        .navbar-toggler {
-            display: none;
-            background: none;
-            border: none;
-            color: white;
-            font-size: 1.5rem;
-            cursor: pointer;
-        }
-
-        /* Header and Hero */
-        header {
-            position: relative;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
-                        url('https://framerusercontent.com/images/g5RgJxVlVnNGGG8WU9pq5vBN7B0.png?scale-down-to=2048');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            background-attachment: fixed;
-        }
-
-        .hero-container {
-            flex: 1;
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            padding: 0 70px;
-            z-index: 10;
-        }
-
-        .hero {
-            max-width: 700px;
-        }
-
-        .hero-title {
-            font-family: 'Playfair Display', serif;
-            font-size: 68px;
-            font-weight: 700;
-            color: #ffffff;
-            margin-bottom: 20px;
-            line-height: 1.2;
-            opacity: 1;
-            transform: none;
-        }
-
-        .hero-subtitle {
-            font-family: 'Montserrat', sans-serif;
-            font-size: 20px;
-            color: #ffffff;
-            margin-bottom: 30px;
-            line-height: 1.8;
-            font-weight: 300;
-            opacity: 1;
-            transform: none;
-        }
-
-        .btn-shop {
-            display: inline-block;
-            padding: 16px 45px;
-            background: transparent;
-            color: #ffffff;
-            border: 2px solid #ffffff;
-            text-transform: uppercase;
-            text-decoration: none;
-            font-weight: 500;
-            font-size: 15px;
-            letter-spacing: 2px;
-            transition: all 0.4s ease;
-            cursor: pointer;
-            opacity: 1;
-            transform: none;
-        }
-
-        .btn-shop:hover {
-            background: #ffffff;
-            color: #000;
-        }
-
-        /* Mobile responsiveness */
-        @media (max-width: 768px) {
-            header {
-                min-height: 80vh;
-            }
-
-            .navbar {
-                flex-wrap: wrap;
-                padding: 1rem;
-            }
-
-            .navbar-toggler {
-                display: block;
-            }
-
-            .navbar-nav {
-                width: 100%;
-                flex-direction: column;
-                gap: 1rem;
-                display: none;
-                margin-top: 1rem;
-            }
-
-            .navbar-nav.active {
-                display: flex;
-            }
-
-            .nav-link {
-                padding: 0.5rem 0;
-                border-bottom: 1px solid #333;
-            }
-
-            .nav-link::after {
-                display: none;
-            }
-
-            .hero-container {
-                padding: 0 20px;
-            }
-
-            .hero-title {
-                font-size: 42px;
-            }
-
-            .hero-subtitle {
-                font-size: 16px;
-            }
-
-            .btn-shop {
-                padding: 12px 30px;
-                font-size: 13px;
-            }
-        }
-    </style>
 </head>
+
 <body>
     <header>
-        <nav class="navbar">
-            <a class="navbar-brand" href="#">Charmant</a>
-            <button class="navbar-toggler" onclick="toggleMenu()">
-                <i class="fas fa-bars"></i>
-            </button>
-            <ul class="navbar-nav" id="navbarNav">
+      <div class="background-overlay"></div>
+<nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">Charmant</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="shop.html">Shop</a>
                 </li>
@@ -258,24 +36,29 @@
                     </a>
                 </li>
             </ul>
+        </div>
+    </div>
+</nav>
+
+
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </nav>
-        
-        <div class="hero-container">
+        <div class="container">
             <div class="hero">
                 <h1 class="hero-title">Jewelries That Radiates Charm</h1>
-                <p class="hero-subtitle">Discover elegant, one-of-a-kind jewelry crafted to elevate your everyday moments and unforgettable occasions.</p>
-                <a href="shop.html" class="btn-shop">Shop Now</a>
+                <p class="hero-subtitle">Discover elegant, one-of-a-kind jewelry crafted to elevate your everyday
+                    moments and unforgettable occasions.</p>
+                <a href="shop.html" class="btn btn-shop">Shop Now</a>
             </div>
         </div>
     </header>
-<<<<<<< Updated upstream
-  
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script src="script.js"></script>
-=======
    
->>>>>>> Stashed changes
-    <!-- Features Section -->
     <section class="features">
         <div class="container">
             <div class="feature">
@@ -327,7 +110,7 @@
             transform: translateY(50px);
         }
 
-        /* Fixed heading styles */
+       
         .collections .main-heading {
             font-family: 'Playfair Display', serif;
             font-size: 42px;
@@ -338,7 +121,7 @@
             position: relative;
             padding-bottom: 15px;
             opacity: 1;
-            /* Ensure initial visibility */
+           
         }
 
         .collections .main-heading::after {
@@ -421,7 +204,7 @@
             }
         }
 
-        /* Right heading styles */
+       
         .right-heading {
             position: absolute;
             top: 50%;
@@ -442,7 +225,7 @@
             transform: translateY(-50%) translateX(0);
         }
 
-        /* Responsive design */
+        
         @media (max-width: 768px) {
             .text-container {
                 grid-template-columns: 1fr;
@@ -480,7 +263,7 @@
             </div>
         </section>
         <script>
-            // Function to check if element is in viewport
+           
             function isInViewport(element) {
                 const rect = element.getBoundingClientRect();
                 return (
@@ -491,7 +274,7 @@
                 );
             }
 
-            // Function to handle animations
+            
             function handleAnimations() {
                 const titleColumn = document.querySelector('.title-column');
                 const contentColumn = document.querySelector('.content-column');
@@ -512,18 +295,18 @@
                 }
             }
 
-            // Add event listeners
+            
             window.addEventListener('load', handleAnimations);
             window.addEventListener('scroll', handleAnimations);
             window.addEventListener('resize', handleAnimations);
         </script>
-        <!-- Collections Section -->
+       
         <section class="collections">
             <div class="container">
-                <!-- Minimalist Elegance -->
+               
                 <div class="collection-item">
                     <a href="minimalist-elegance.html">
-                        <img src="https://framerusercontent.com/images/aP67aArB7bl4xAny84m7tnlNg.png"
+                        <img src="V17XXaUqYp58Mw2vxBOHMSDsC8U.avif "
                             alt="Minimalist Elegance">
                         <div class="overlay">
                             <h3>Minimalist Elegance</h3>
@@ -531,7 +314,7 @@
                     </a>
                 </div>
 
-                <!-- Bridal Bliss -->
+              
                 <div class="collection-item">
                     <a href="Bridalbliss.html">
                         <img src="https://framerusercontent.com/images/hzlREuGMkJlTQl75NcJZxrMLx14.png"
@@ -541,7 +324,7 @@
                         </div>
                     </a>
                 </div>
-                <!-- Timeless Classics -->
+                
                 <div class="collection-item">
                     <a href="timeless.html">
                         <img src="https://framerusercontent.com/images/9mrOlwmXEttSz18j1MW2OdH2w1U.png"
@@ -556,12 +339,12 @@
         </style>
         </head>
         <div class="container">
-            <!-- Image on the left -->
+          
             <div class="image-section">
                 <img src="GcYwhsR3AxAPP83jIFGm7LROKDU.avif" alt="Charmant Jewelry">
             </div>
 
-            <!-- Text on the right -->
+           
             <div class="text-section">
                 <p class="quote">
                     "At Charmant, we craft jewelry to be more than an accessory—it's a keepsake of moments, love, and
@@ -690,7 +473,7 @@
                         </div>
                     </div>
 
-                    <!-- Second Row -->
+                   
                     <div class="row">
                         <div class="item">
                             <a href="addtocart.html">
@@ -722,7 +505,7 @@
                         </div>
                     </div>
 
-                    <!-- Third Row -->
+                  
                     <div class="row">
                         <div class="item">
                             <a href="addtocart.html">
@@ -1314,5 +1097,11 @@
 
         </html>
     </body>
+
+</html>
+</body>
+
+</html>
+</body>
 
 </html>
